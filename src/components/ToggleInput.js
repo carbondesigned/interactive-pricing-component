@@ -5,7 +5,7 @@ const ToggleInput = () => {
   return (
     <StyledToggle>
       <label class="switch">
-        <input type="checkbox" />
+        <input label="toggle-input" type="checkbox" />
         <span class="slider round"></span>
       </label>
     </StyledToggle>

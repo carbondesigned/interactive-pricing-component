@@ -20,7 +20,7 @@ const Hero = () => {
       </StyledHeader>
       <StyledCard>
         <CardTopMobile>
-          <h4 className="card-title">100k pageviews</h4>
+          <h2 className="card-title">100k pageviews</h2>
           <MainSlider />
           <h3 className="plan">
             $16.00 <span>/ month</span>
@@ -28,7 +28,7 @@ const Hero = () => {
         </CardTopMobile>
         <CardTopFull>
           <div className="top">
-            <h4 className="card-title">100k pageviews</h4>
+            <h2 className="card-title">100k pageviews</h2>
             <h3 className="plan">
               $16.00 <span>/ month</span>
             </h3>
@@ -61,7 +61,7 @@ const Hero = () => {
   )
 }
 
-const StyledHero = styled.section`
+const StyledHero = styled.main`
   min-height: 100vh;
   width: 100%;
   display: flex;
