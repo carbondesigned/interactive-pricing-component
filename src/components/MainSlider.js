@@ -57,13 +57,29 @@ const StyledSlider = styled.input`
   }
 
   ::-moz-range-thumb {
+    -webkit-appearance: none;
     width: 48px;
     height: 48px;
-    -moz-appearance: none;
     background: hsl(174, 86%, 45%);
     border-radius: 50%;
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 15px 35px 0.5px hsl(174, 86%, 45%);
     cursor: pointer;
+    display: block;
+    position: relative;
+    background-image: url(${thumb});
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center;
+    transition: 200ms;
+
+    &:hover,
+    &:focus {
+      background: #009c8d;
+      background-image: url(${thumb});
+      background-repeat: no-repeat;
+      background-size: 65%;
+      background-position: center;
+    }
   }
 `
 

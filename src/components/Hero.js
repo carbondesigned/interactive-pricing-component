@@ -243,6 +243,17 @@ const CardBottom = styled.div`
       padding: 2em 5em;
       width: 100%;
       gap: 10em;
+
+      .guaranties {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        li {
+          width: 100%;
+          text-align: left;
+        }
+      }
     }
 
     &::after {
