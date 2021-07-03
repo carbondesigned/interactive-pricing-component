@@ -11,7 +11,7 @@ import circles from "../assets/design/images/pattern-circles.svg"
 
 const Hero = () => {
   return (
-    <StyledHero role="main">
+    <StyledHero>
       <StyledHeader pattern={circles} className="header">
         <h1>Simple, traffic-based pricing</h1>
         <p>Sign up for our 30-day trial.</p>
