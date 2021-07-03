@@ -8,9 +8,13 @@ const MainSlider = () => {
 
   return (
     <>
+      <label htmlFor="slider" hidden>
+        Interactive Range Slider
+      </label>
       <StyledSlider
         value={value}
-        label="slider"
+        name="slider"
+        id="slider"
         onChange={(e) => setValue(e.target.value)}
         type="range"
         min="0"
