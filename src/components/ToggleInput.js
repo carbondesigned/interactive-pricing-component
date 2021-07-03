@@ -41,10 +41,10 @@ const StyledToggle = styled.div`
   .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
+    height: 18px;
+    width: 18px;
+    left: 6px;
+    bottom: 6px;
     background-color: white;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -59,14 +59,14 @@ const StyledToggle = styled.div`
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(32px);
-    -ms-transform: translateX(32px);
-    transform: translateX(32px);
+    -webkit-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
   }
 
   /* Rounded sliders */
   .slider.round {
-    border-radius: 34px;
+    border-radius: 10em;
   }
 
   .slider.round:before {

@@ -1,19 +1,70 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
+import thumb from "../assets/design/images/icon-slider.svg"
+
 const MainSlider = () => {
+  const [value, setValue] = useState(50)
+
   return (
-    <StyledSlider>
-      <input type="range"></input>
-    </StyledSlider>
+    <>
+      <StyledSlider
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        type="range"
+        min="0"
+        max="100"
+      ></StyledSlider>
+    </>
   )
 }
 
-const StyledSlider = styled.div`
+const StyledSlider = styled.input`
+  margin: 4em 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2em 0;
+  height: 12px;
+  border-radius: 20em;
+  background: ${(props) =>
+    `linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) ${props.value}%, hsl(224, 65%, 95%) ${props.value}%, hsl(224, 65%, 95%) 100%);`};
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    background: hsl(174, 86%, 45%);
+    border-radius: 50%;
+    box-shadow: 0px 15px 35px 0.5px hsl(174, 86%, 45%);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background-image: url(${thumb});
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center;
+    transition: 200ms;
+
+    &:hover,
+    &:focus {
+      background: #009c8d;
+      background-image: url(${thumb});
+      background-repeat: no-repeat;
+      background-size: 65%;
+      background-position: center;
+    }
+  }
+
+  ::-moz-range-thumb {
+    width: 48px;
+    height: 48px;
+    -moz-appearance: none;
+    background: hsl(174, 86%, 45%);
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
 `
 
 export default MainSlider
