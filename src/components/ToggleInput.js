@@ -4,8 +4,8 @@ import styled from "styled-components"
 const ToggleInput = () => {
   return (
     <StyledToggle>
-      <label class="switch">
-        <input label="toggle" type="checkbox" />
+      <label class="switch" htmlFor="toggle">
+        <input name="toggle" label="toggle" type="checkbox" />
         <span class="slider round"></span>
       </label>
     </StyledToggle>

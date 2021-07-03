@@ -14,7 +14,6 @@ const MainSlider = () => {
       <StyledSlider
         value={value}
         name="slider"
-        id="slider"
         onChange={(e) => setValue(e.target.value)}
         type="range"
         min="0"
